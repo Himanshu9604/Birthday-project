@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Darshana</title>
+
+  <link rel="icon" type="image/jpeg" href="assets/dar4.jpeg" >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div id="particles"></div>
+
+  <!-- LOCK SCREEN -->
+  <section id="lockScreen" class="center">
+    <div class="card">
+      <h1>🎂 Happy Birthday Darshana 🎂</h1>
+      <p>A Special Surprise Has Been Prepared For You ❤️</p>
+
+      <input id="passcode" type="text" placeholder="Enter Passcode">
+
+      <button onclick="unlock()">
+        ✨ Unlock Memories ✨
+      </button>
+
+      <p id="error"></p>
+    </div>
+  </section>
+
+  <!-- LOADING SCREEN -->
+  <section id="loadingScreen" class="hidden center">
+    <div class="card">
+      <h2>Hey Darshu❤️</h2>
+
+      <p id="loadingText">
+        Loading Your Birthday Surprise...
+      </p>
+
+      <div class="bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section id="mainContent" class="hidden">
+
+    <div class="hero">
+
+      <h1 class="birthday-title">
+        🎉 Happy Birthday Darshana 🎉
+      </h1>
+
+      <div id="typedText"></div>
+
+      <div class="scroll-down">
+        ❤️ Scroll Down ❤️
+      </div>
+
+    </div>
+    <div id="memorySection" class="hidden">
+
+      <section class="gallery-section">
+
+        <h2>📸 Beautiful Memories</h2>
+
+        <div class="gallery">
+
+          <div class="memory-card" onclick="openMemory(this)">
+            <img src="assets/dar1.jpeg" />
+            <p>The Smile I Never Forget 😊</p>
+          </div>
+
+          <div class="memory-card" onclick="openMemory(this)">
+            <img src="assets/dar2.jpeg" />
+            <p>One Of My Favourite Humans ❤️</p>
+          </div>
+
+          <div class="memory-card" onclick="openMemory(this)">
+            <img src="assets/dar3.jpeg" />
+            <p>A Beautiful Soul 🌸</p>
+          </div>
+
+          <div class="memory-card" onclick="openMemory(this)">
+            <img src="assets/dar4.jpeg" />
+            <p>Random Memory ✨</p>
+          </div>
+
+          <div class="memory-card" onclick="openMemory(this)">
+            <img src="assets/dar5.jpeg" />
+            <p>Little Moments 💖</p>
+          </div>
+
+          <div class="memory-card" onclick="openMemory(this)">
+            <img src="assets/dar6.jpeg" />
+            <p>Forever Vibes 🌙</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Popup -->
+      <div id="memoryPopup" class="popup hidden" onclick="closeMemory()">
+        <img id="popupImg" />
+        <p id="popupText"></p>
+      </div>
+
+      <section class="timeline">
+
+        <h2>📖 Our Beautiful Journey</h2>
+
+        <div class="timeline-card">
+          <h3>🎓 2019 — The Beginning</h3>
+          <p>
+            Sometimes life introduces us to people when we least expect it.
+            2019 was just another year until I met you.
+            At that time, I never imagined that one simple friendship
+            would become one of the most valuable connections in my life.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <h3>🤝 The Friendship That Grew Stronger</h3>
+          <p>
+            Slowly conversations turned into memories.
+            Random talks became daily habits.
+            Laughter became comfort.
+            And without even realizing it,
+            you became someone whose presence always felt special.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <h3>💼 7 July 2022 — A Proud Moment</h3>
+          <p>
+            I still remember the excitement when you joined your first company.
+            A new journey.
+            New responsibilities.
+            New dreams.
+            Watching you grow through every challenge made me genuinely proud.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <h3>🌸 The Person You Became</h3>
+          <p>
+            Through every struggle, every responsibility and every challenge,
+            you never stopped moving forward.
+            You became stronger, wiser and more confident.
+            That's something I truly admire about you.
+          </p>
+        </div>
+
+        <div class="timeline-card">
+          <h3>👑 Today</h3>
+          <p>
+            Today I don't just see a friend.
+            I see an amazing woman.
+            A caring daughter.
+            A hardworking professional.
+            A beautiful soul who deserves every happiness this world can offer.
+          </p>
+        </div>
+
+      </section>
+
+      <h2 class="title">
+        ❤️ Things I Admire About You ❤️
+      </h2>
+
+      <div class="cards">
+
+        <div class="flip">
+          💪<br><br>
+          Your Strength During Difficult Times
+        </div>
+
+        <div class="flip">
+          🌸<br><br>
+          Your Beautiful And Kind Heart
+        </div>
+
+        <div class="flip">
+          😊<br><br>
+          The Way You Make People Smile
+        </div>
+
+        <div class="flip">
+          ✨<br><br>
+          Your Positive Energy
+        </div>
+
+        <div class="flip">
+          🎯<br><br>
+          Your Dedication Towards Your Goals
+        </div>
+
+        <div class="flip">
+          ❤️<br><br>
+          Simply Being You
+        </div>
+
+      </div>
+
+      <section class="letter">
+
+        <h2>💌 A Letter For You</h2>
+
+        <p>
+          Dear Darshu,
+
+          If there's one thing life has taught me,
+          it's that genuine people are rare.
+
+          And you are one of those rare people.
+
+          Over the years,
+          I've seen your struggles,
+          your hard work,
+          your determination,
+          and your never-give-up attitude.
+
+          No matter how difficult things became,
+          you always found a way to keep moving forward.
+
+          That's what makes you special.
+
+          You carry responsibilities with grace.
+
+          You care deeply about the people around you.
+
+          You support others even when nobody sees it.
+
+          And despite everything,
+          you still manage to smile.
+
+          Thank you for every memory.
+          Thank you for every conversation.
+          Thank you for every moment of friendship.
+
+          I genuinely feel lucky to know someone like you.
+
+          Never doubt your worth.
+
+          Never underestimate your strength.
+
+          Because you are far more amazing than you realize.
+
+          ❤️
+        </p>
+
+      </section>
+      <section class="letter">
+
+        <h2>🙏 Things I Appreciate About You</h2>
+
+        <div class="list-content">
+          <div>✨ Thank you for always being genuine.</div>
+          <div>✨ Thank you for every conversation.</div>
+          <div>✨ Thank you for every laugh we shared.</div>
+          <div>✨ Thank you for your kindness.</div>
+          <div>✨ Thank you for inspiring people around you.</div>
+          <div>✨ Thank you for being strong during difficult times.</div>
+          <div>✨ Thank you for never giving up.</div>
+          <div>✨ Thank you for all the memories.</div>
+          <div>✨ Thank you for being someone people can rely on.</div>
+          <div>✨ Most importantly, thank you for being YOU.</div>
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>📩 Open When...</h2>
+
+        <div class="list-content">
+
+          <div>
+            🌧️ <b>Open when you're sad</b><br>
+            Remember how strong you've been through every challenge.
+          </div>
+
+          <div>
+            💼 <b>Open when work feels stressful</b><br>
+            You've already achieved more than you realize.
+          </div>
+
+          <div>
+            🌟 <b>Open when you doubt yourself</b><br>
+            There are people who genuinely admire and respect you.
+          </div>
+
+          <div>
+            😊 <b>Open when you're happy</b><br>
+            Celebrate yourself because you deserve it.
+          </div>
+
+          <div>
+            🎂 <b>Open today</b><br>
+            And remember how special you truly are.
+          </div>
+
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>🌸 Things That Make You Special</h2>
+
+        <div class="list-content">
+
+          <div>🌷 You stay real in a world full of pretenders.</div>
+
+          <div>💪 You keep moving forward even when life gets tough.</div>
+
+          <div>✨ You don't try to impress people, you simply stay yourself.</div>
+
+          <div>😊 Your smile can make someone's day better.</div>
+
+          <div>🤝 You care deeply about the people around you.</div>
+
+          <div>👑 You carry strength and kindness together.</div>
+
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>✨ Fun Facts About Darshu</h2>
+
+        <div class="list-content">
+
+          <div>📸 Has a smile that improves the mood instantly.</div>
+
+          <div>☕ Handles stressful days better than most people.</div>
+
+          <div>😎 Stronger than she thinks.</div>
+
+          <div>🌸 Kinder than she realizes.</div>
+
+          <div>💼 Extremely hardworking.</div>
+
+          <div>😂 Laughs at random things.</div>
+
+          <div>👑 Main Character Energy.</div>
+
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>🌸 What Makes Darshu Special</h2>
+
+        <div class="list-content">
+
+          <div>
+            ✨ She doesn't need attention to stand out.
+            Her personality does that naturally.
+          </div>
+
+          <div>
+            💪 Even when life gets difficult,
+            she keeps moving forward without giving up.
+          </div>
+
+          <div>
+            😊 She carries a smile that can brighten someone's entire day.
+          </div>
+
+          <div>
+            🌷 Strong enough to face challenges,
+            yet kind enough to care for everyone around her.
+          </div>
+
+          <div>
+            💼 Behind every achievement is her hard work,
+            dedication and determination.
+          </div>
+
+          <div>
+            🌙 The best thing about her is that she stays real
+            in a world where many people pretend.
+          </div>
+
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>🏆 Achievement Wall</h2>
+
+        <div class="list-content">
+
+          <div>✅ Completed college successfully.</div>
+
+          <div>✅ Built a professional career.</div>
+
+          <div>✅ Handled responsibilities bravely.</div>
+
+          <div>✅ Overcame difficult challenges.</div>
+
+          <div>✅ Continued growing every year.</div>
+
+          <div>✅ Became someone people respect.</div>
+
+          <div>✅ Made family proud.</div>
+
+          <div>✅ Became stronger than yesterday.</div>
+
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>✨ A Few Things About You</h2>
+
+        <div class="list-content">
+
+          <div>
+            🌸 Kindness Level :
+            Higher than you'll ever realize.
+          </div>
+
+          <div>
+            😊 Smiles Given To Others :
+            Too many to count.
+          </div>
+
+          <div>
+            💪 Strength :
+            Much greater than you think.
+          </div>
+
+          <div>
+            💼 Hard Work :
+            Visible in every achievement you've earned.
+          </div>
+
+          <div>
+            🌟 Impact On People :
+            More than you know.
+          </div>
+
+          <div>
+            🚀 Future Potential :
+            Absolutely limitless.
+          </div>
+
+        </div>
+
+      </section>
+      <section class="letter">
+
+        <h2>🌙 If Darshu Was A Place...</h2>
+
+        <p>
+
+          If Darshu was a place,
+
+          she would be the kind of place
+          people never want to leave.
+
+          A place where hearts feel lighter.
+
+          A place where laughter feels louder.
+
+          A place where kindness lives naturally.
+
+          Not because everything is perfect there,
+
+          but because it feels like home.
+
+          The kind of home
+          that brings peace during chaos,
+          hope during difficult times,
+          and comfort when words aren't enough.
+
+          Some people are remembered for what they do.
+
+          Some are remembered for what they achieve.
+
+          But the most special people are remembered
+          for how they make others feel.
+
+          And that's exactly what makes you special.
+
+          You leave kindness behind wherever you go.
+
+          You make people feel valued.
+
+          And without even realizing it,
+          you make the world a little brighter.
+
+          🌸✨
+
+        </p>
+
+      </section>
+
+      <section class="final-wish">
+
+        <h1>🎂 Happy Birthday Darshana 🎂</h1>
+
+        <p>
+
+          Another year.
+          Another chapter.
+          Another opportunity to become everything you've ever dreamed of.
+
+          Today isn't just about celebrating your birthday.
+
+          It's about celebrating the amazing person you've become.
+
+          The strength you've shown.
+
+          The challenges you've overcome.
+
+          The happiness you've brought into the lives of others.
+
+          Through every success,
+          every struggle,
+          every lesson,
+          and every achievement,
+
+          you've continued to grow into someone truly admirable.
+
+          I hope this year brings you
+          countless reasons to smile,
+          exciting opportunities,
+          beautiful memories,
+          and everything your heart wishes for.
+
+          Never stop believing in yourself.
+
+          Never stop dreaming.
+
+          Never stop being the wonderful person you are.
+
+          Because the world genuinely becomes a better place
+          with people like you in it.
+
+          Wishing you happiness,
+          success,
+          peace,
+          good health,
+          and endless blessings.
+
+          Have the most beautiful birthday ever.
+
+          ✨🎂🌸
+
+        </p>
+
+      </section>
+      <section class="letter">
+
+        <h2>🕰️ Before This Page Ends...</h2>
+
+        <p>
+
+          Before you leave this page,
+
+          I just want you to remember one thing.
+
+          Life may not always remind you
+          how amazing you are.
+
+          People may not always tell you
+          how much they appreciate you.
+
+          But that doesn't change the truth.
+
+          You are stronger than you think.
+
+          Kinder than you realize.
+
+          More capable than you believe.
+
+          And more appreciated than you know.
+
+          Whenever life feels difficult,
+
+          come back to this page.
+
+          Read these words again.
+
+          And remember that there will always be people
+          cheering for your happiness,
+          your success,
+          and your dreams.
+
+          Keep smiling.
+
+          Keep growing.
+
+          Keep being you.
+
+          🌸✨
+
+        </p>
+
+      </section>
+      <button class="surprise-btn" onclick="showSecretMessage()">
+        🎁 One Last Surprise
+      </button>
+
+      <div id="secretMessage" class="secret-card hidden">
+
+        <h2>✨ One Last Thing ✨</h2>
+
+        <p>
+          Agar tum yaha tak pahunch gayi ho,
+
+          to shayad tumne meri har chhoti baat padh li hogi.
+
+          Sach kahu,
+
+          ye page sirf tumhe birthday wish karne ke liye nahi banaya tha.
+
+          Ye un feelings ke liye tha jo main kaafi time se dil mein rakhe hue tha.
+
+          Pata nahi kab hamari baatein meri daily routine ka hissa ban gayi.
+
+          Aur pata nahi kab tum mere liye itni special ban gayi.
+
+          Shayad main hamesha words mein express nahi kar paaya,
+
+          lekin aaj kehna chahta hu...
+
+          I Love You ❤️
+
+          Koi pressure nahi,
+          koi expectation nahi.
+
+          Bas itna ki jo bhi jawab ho,
+          tumhari respect aur importance meri life mein kabhi kam nahi hogi.
+
+          Happy Birthday Darshu 🌸🎂✨
+        </p>
+
+        <div class="proposal-box">
+
+          <h2>🌸 One Small Question 🌸</h2>
+
+          <p>
+            Kya tum meri life ka part banna pasand karogi? ❤️
+          </p>
+
+          <div class="btn-group">
+            <button id="yesBtn">💖 Yes</button>
+            <button id="noBtn">🙈 No</button>
+          </div>
+
+        </div>
+
+      </div>
+
+  </section>
+
+  <audio id="song" loop>
+    <source src="song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
