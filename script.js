@@ -2,7 +2,7 @@ function unlock() {
 
   const code = document.getElementById("passcode").value.trim();
 
-  if (code === "28") {
+  if (code === "28/04/2000") {
 
     document.getElementById("lockScreen").classList.add("hidden");
     document.getElementById("loadingScreen").classList.remove("hidden");
